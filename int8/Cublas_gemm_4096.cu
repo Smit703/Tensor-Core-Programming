@@ -63,8 +63,8 @@ int main()
         cublasHandle_t handle;
         cublasCreate(&handle);
 
-        const float alpha = 1.0f;
-        const float beta = 1.0f;
+        const int alpha = 1;
+        const int beta = 1;
 
         cublasGemmEx(
             handle,
