@@ -75,7 +75,7 @@ int main()
             d_matrixB, CUDA_R_8I, N_TOTAL,
             &beta,
             d_matrixC, CUDA_R_32I, N_TOTAL,
-            CUDA_R_32I, CUBLAS_GEMM_DEFAULT_TENSOR_OP
+            CUBLAS_COMPUTE_32I, CUBLAS_GEMM_DEFAULT_TENSOR_OP
         );
 
         cudaMemcpy(matrixC, d_matrixC, N_TOTAL * N_TOTAL * sizeof(int), cudaMemcpyDeviceToHost);
